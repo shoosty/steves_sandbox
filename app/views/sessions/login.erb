@@ -1,0 +1,15 @@
+Login
+<br>
+<br>
+read params from the url
+<br>
+  &nbsp;example http://localhost:3000/login?fname=Buddy&lname=Shoes
+<%= params[:fname]%>
+<%= params[:lname]%>
+<br>
+<br>
+Set Session Variables
+<br>
+&nbsp;<%= session[:fname]= params[:fname]%>
+&nbsp;<%= session[:lname]= params[:lname]%>
+<br>

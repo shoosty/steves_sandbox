@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Steve Test</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/demos">Demos</a>
+    <a href="/notes">Notes</a>
+    <a href="/contact">Contact</a>
+    <a href="/login?fname=Buddy&lname=Shoes">Login</a>
+
+
+  </head>
+
+  <body>
+    <br>
+    <br>
+    NOTE: Current Session = <%= render("layouts/session") %>
+    <br>
+    <%= yield %>
+  </body>
+</html>
