@@ -1,1 +1,17 @@
-Public Facing Notes
+set up github
+  go to github and crate reposititory
+  use the https method
+
+set up database
+console
+rails generate (gives help messages)
+  rails generate migration steves_sandbox  (creates a migration)
+run migration
+  rake db:migrate
+  note:
+    tables are plural
+    classes are singular
+example:
+rails generate migration AddFieldsToSandbox user:text email:text fname:text lname:text password:text
+
+rake db:migrate
