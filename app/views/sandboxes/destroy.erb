@@ -1,0 +1,8 @@
+Record Deleted
+
+<%= p params[:format]%>
+
+<%  user = Sandbox.find_by("id = #{params[:format]}")%>
+<%  user.delete %>
+<br>
+Return to all users<a href="/sandbox">Users</a>

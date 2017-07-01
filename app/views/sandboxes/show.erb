@@ -1,0 +1,6 @@
+Show
+
+<% user = Sandbox.all%>
+<% user.each{|rec| rec %>
+<%=render 'records', user:rec%>
+<% } %>
