@@ -28,3 +28,16 @@ clean code with atom - open command pallette and choose autoindent
 command - shift - p
 seek auto indent
 .....
+
+Active Record environment
+require File.expand_path('../../config/environment', __FILE__)
+
+Active Record tests
+
+Sandbox.where("id = 311")
+Sandbox.where("id >= 211 and id <=400")
+Sandbox.where "user LIKE '%Paul%'"
+
+....
+make nicely formated records
+gem install table_print

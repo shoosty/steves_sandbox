@@ -11,7 +11,7 @@ class AddFakeRecords
         lname: Faker::Name.last_name,
         user: Faker::Artist.name,
         email: Faker::Internet.email,
-        password: Faker::Crypto.md5
+        password: Faker::Crypto.sha256
         )
       counter += 1
     end
