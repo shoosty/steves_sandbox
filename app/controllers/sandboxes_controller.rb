@@ -4,7 +4,11 @@ class SandboxesController < ApplicationController
   end
 
   def create
-    sandbox_params
     Sandbox.create(sandbox_params)
+  end
+
+  def update
+    Sandbox.update(sandbox_params)
+    redirect_to "/sandbox"
   end
 end

@@ -5,7 +5,7 @@ Last    :<%= user.lname %><br>
 Email   :<%= user.email %><br>
 Password:<%= user.password %>
 <br>
+<%= button_to "edit", edit_sandbox_path(user), :method => "get" %>
 <%= button_to "delete", user, :method => "delete" %>
-
 
 <br><br>
