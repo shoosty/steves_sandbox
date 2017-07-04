@@ -1,0 +1,9 @@
+Show Index of all records
+
+<br>
+<br>
+
+<% user = User.all%>
+<% user.each{|rec| rec %>
+<%= render 'user_records', user:rec %>
+<% } %>

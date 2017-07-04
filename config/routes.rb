@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'login'   => 'sessions#login'
 
   resource :sandbox
+  resources :users
 
   #rake routes to see the magic
 
