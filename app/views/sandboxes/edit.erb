@@ -6,14 +6,7 @@ Edit
 <%= user = Sandbox.find_by("id = #{params[:format]}")%>
 <br>
 <br>
-
-<form action="/sandbox" method="POST">
-
-User:   <input type='text' name="sandbox[user]"  value= "<%= user.user %>"  ><br>
-First:  <input type='text' name="sandbox[fname]" value= "<%= user.fname %>" ><br>
-Last:   <input type='text' name="sandbox[lname]" value= "<%= user.lname %>" ><br>
-email:  <input type='text' name="sandbox[email]" value= "<%= user.email %>" ><br>
-password:<input type='text' name="sandbox[password]"  value= <%= user.password %>  ><br>
+<%= render "form", user:user %>
 
 <br>
   <input type="hidden" name="_method" value="patch" >

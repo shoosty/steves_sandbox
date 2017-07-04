@@ -1,3 +1,5 @@
+Destroy view
+<br>
 Record Deleted:
 
 <%= p params[:format]%>
@@ -5,4 +7,4 @@ Record Deleted:
 <%  user = Sandbox.find_by("id = #{params[:format]}")%>
 <%  user.delete %>
 <br>
-Return to all users<a href="/sandbox">Users</a>
+Return to all users <a href="/sandbox">Users</a>

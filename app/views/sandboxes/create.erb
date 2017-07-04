@@ -1,1 +1,27 @@
-Create
+Create view
+<br>
+One Record Created
+<br>
+
+<% user = User.new(
+  params["sandbox"][:id],
+  params["sandbox"][:user],
+  params["sandbox"][:fname],
+  params["sandbox"][:lname],
+  params["sandbox"][:email],
+  params["sandbox"][:password]
+  ) %>
+<br>
+<br>
+
+
+<form action="/sandbox" method="POST">
+
+ID:     <input type="hidden" name="id" value= "<%= user.id %>"  ><br>
+User:   <%= user.user %><br>
+First:  <%= user.fname %><br>
+Last:   <%= user.lname %><br>
+email:  <%= user.email %><br>
+password:<%= user.password %><br>
+
+<a href="/sandbox">Show All Users</a>
