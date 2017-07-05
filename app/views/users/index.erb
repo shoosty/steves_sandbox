@@ -2,6 +2,12 @@ Show Index of all records
 
 <br>
 <br>
+<br>
+<tr>
+  <td><%= link_to 'Add Record', @user, method: :create  %></td>
+  <td><%= link_to 'New User', new_user_path %>><td>
+</tr>
+
 
 <% user = User.all%>
 <% user.each{|rec| rec %>
