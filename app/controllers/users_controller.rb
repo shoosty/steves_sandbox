@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def update
     user.update(user_params)
-        redirect_to "/users"
+    redirect_to "/users"
   end
 
   def destroy
