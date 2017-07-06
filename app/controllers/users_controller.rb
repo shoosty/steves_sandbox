@@ -7,6 +7,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    if @user.save
+      render :create
+    else
+      render :error
+    end
   end
 
   def user
