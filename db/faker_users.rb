@@ -3,10 +3,10 @@ require File.expand_path('../../config/environment', __FILE__)
 
 # add records to users table
 
-class AddFakeRecords
+class AddFakeUsers
   def add_fake_records
 
-    n = 20
+  n = 20
    n.downto(1){
       User.create(
         first_name: Faker::Name.first_name,
@@ -19,4 +19,4 @@ class AddFakeRecords
 end
 
 
-AddFakeRecords.new.add_fake_records
+AddFakeUsers.new.add_fake_records

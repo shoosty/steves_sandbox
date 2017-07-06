@@ -1,0 +1,17 @@
+Accounts Show 1 Record
+<br>
+
+ID:             <%= @account.id %><br>
+Account Holder: <%= @account.accountholder %><br>
+Location:       <%= @account.location %><br>
+Created:        <%= @account.created_at %><br>
+Updated:        <%= @account.updated_at %><br>
+<br>
+
+<tr>
+  <td><%= link_to "Index of all Accounts", accounts_path %> </td>
+  <br>
+  <td><%= link_to "Update Account Record", edit_account_path %></td>
+  <br>
+  <%= link_to 'Delete Record', @account, method: :delete, data: {confirm: 'Are you sure?'}%></td>
+</tr>

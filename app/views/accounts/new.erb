@@ -1,0 +1,8 @@
+<%= simple_form_for @account do |f| %>
+  <%= f.input :accountholder %>
+  <%= f.input :location %>
+  <%= f.button :submit %>
+<% end %>
+
+<br>
+<%= link_to 'Back', accounts_path %>

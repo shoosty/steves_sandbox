@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resource :sandbox
   resources :users
+  resources :accounts
   #rake routes to see the magic
 
 end
