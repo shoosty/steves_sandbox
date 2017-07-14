@@ -1,5 +1,5 @@
 # load rails environment
-require File.expand_path('../../config/environment', __FILE__)
+require File.expand_path('../../../config/environment', __FILE__)
 
 class AddFakeAccounts
   def add_fake_acocunts

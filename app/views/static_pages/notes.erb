@@ -16,10 +16,14 @@ run migration
   rake db:migrate
   note:
     tables are plural
-    classes are singular
+    classes are singular except controllers which are plural!
 example:
-rails generate migration AddFieldsToSandbox user:text email:text fname:text lname:text password:text
+rails generate migration CreateMountain mountain:text height:integer notes:text
 
+
+rails generate migration AddFieldsToSandbox user:text email:text fname:text lname:text password:text
+rails generate controller mountain   (not correct)
+rails generate controller mountains (correct - notice plural)
 rake db:migrate
 
 

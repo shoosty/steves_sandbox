@@ -1,0 +1,9 @@
+<%= simple_form_for @mountain do |f| %>
+  <%= f.input :mountain %>
+  <%= f.input :height %>
+  <%= f.input :notes %>
+  <%= f.button :submit %>
+<% end %>
+
+<br>
+<%= link_to 'Back', mountains_path %>

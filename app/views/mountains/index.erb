@@ -1,0 +1,7 @@
+Mountains - Index of all Mountain Records
+
+<%= link_to 'Add Mountain', new_mountain_path %>
+
+<% @mountains.each{|record| %>
+<%= render('mountain_record', mountain:record) %>
+<% } %>

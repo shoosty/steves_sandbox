@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706135212) do
+ActiveRecord::Schema.define(version: 20170714135116) do
 
   create_table "accounts", force: :cascade do |t|
     t.text "accountholder"
     t.text "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "mountains", force: :cascade do |t|
+    t.text "mountain"
+    t.integer "height"
+    t.text "notes"
   end
 
   create_table "sandboxes", force: :cascade do |t|

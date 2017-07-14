@@ -1,0 +1,14 @@
+Mountain Show 1 Record
+
+<br>
+ID        :<%= @mountain.id %><br>
+Mountain  :<%= @mountain.mountain %><br>
+Height    :<%= @mountain.height %><br>
+Notes     :<%= @mountain.notes %><br>
+<br>
+
+<%= link_to "Index of all Mountains", mountains_path %>
+<br>
+<%= link_to "Update Mountain Record", edit_mountain_path %>
+<br>
+<%= link_to 'Delete Record', @mountain, method: :delete, data: {confirm: 'Are you sure'} %>
