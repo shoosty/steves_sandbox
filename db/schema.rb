@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715141550) do
+ActiveRecord::Schema.define(version: 20170715154000) do
 
   create_table "accounts", force: :cascade do |t|
     t.text "accountholder"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170715141550) do
     t.integer "height"
     t.text "notes"
     t.text "planet"
+    t.text "record_added_by_email"
   end
 
   create_table "sandboxes", force: :cascade do |t|
