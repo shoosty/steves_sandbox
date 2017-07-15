@@ -39,7 +39,7 @@ def create
   if @mountain.save
     render :create
   else
-    render :error
+    render :new
   end
 end
 
