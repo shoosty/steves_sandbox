@@ -1,7 +1,7 @@
 class MountainsController < ApplicationController
 
   def index
-    @mountains = Mountain.all
+    @mountains = Mountain.all.reverse
   end
 
   def show

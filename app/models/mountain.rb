@@ -1,6 +1,13 @@
 class Mountain < ApplicationRecord
-  validates :planet, inclusion:{in: %w(Earth Mars), message: "ERROR - %{value} is not valid. the planet must only be Earth of Mars"}
-  validate :tallest_mountain_height_per_planet, :valid_email
+  validates :planet, inclusion:{in: %w(Earth Mars), message: "ERROR - %{value} is not valid. The planet must only be Earth of Mars"}
+  validate :tallest_mountain_height_per_planet, :valid_email, :mountain_empty
+
+  def mountain_empty
+    if mountain == ''
+      errors.add(:mountain, "ERROR - Mountain can not be empty")
+      return false
+    end
+  end
 
   def tallest_mountain_height_per_planet
     if height == nil
