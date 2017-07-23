@@ -1,5 +1,9 @@
 class MountainsController < ApplicationController
 
+  def clean_phone
+    mountain_params[:phone] = mountain_params[:phone].scan(/\d/).join
+  end
+
   def index
     @mountains = Mountain.all.reverse
   end
@@ -17,6 +21,7 @@ class MountainsController < ApplicationController
   end
 
   def update
+    clean_phone
     mountain.update(mountain_params)
     redirect_to "/mountains"
   end
@@ -35,6 +40,7 @@ class MountainsController < ApplicationController
   end
 
 def create
+  clean_phone
   @mountain = Mountain.new(mountain_params)
   if @mountain.save
     render :create
