@@ -31,22 +31,15 @@
           <li><%= link_to "Demos", "/demos"  %></li>
           <li><%= link_to "Notes", "/notes"  %></li>
           <li><%= link_to "Contact", "/contact"  %></li>
-
-          <!-- <li><%= link_to "Login", "/login?fname=Buddy&lname=Shoes"  %></li> -->
-
-
           <% if current_user %>
             <li><%= link_to "Logout", "/users/sign_out", method: 'delete' %></li>
           <% else %>
             <li><%= link_to "Login", "/users/sign_in" %></li>
           <% end %>
-
           <li><%= link_to "SandBox", "/sandbox"  %></li>
           <li><%= link_to "Accounts", "/accounts"  %></li>
           <li><%= link_to "Mountains", "/mountains"  %></li>
-          <li><%= link_to "OldUsers", "/oldusers" %></li>
           <li><%= link_to "#{current_user.email} Member Since #{current_user.created_at.year}"%></li>
-
         </ul>
       </div>
     </div>
