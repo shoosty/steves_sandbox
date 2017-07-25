@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#index'
 
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
   get 'login'   => 'sessions#login'
 
   resource :sandbox
-  resources :users
+  resources :oldusers
   resources :accounts
   resources :mountains
   #rake routes to see the magic

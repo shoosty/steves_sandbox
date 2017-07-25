@@ -1,4 +1,5 @@
 class MountainsController < ApplicationController
+  before_action :authenticate_user!
 
   def clean_phone
     mountain_params[:phone] = mountain_params[:phone].scan(/\d/).join
